@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Nov4ou&#39;s Blog">
@@ -74,6 +74,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -82,11 +83,37 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -124,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +195,93 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/13/properties-of-asymptotic-notations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nov4ou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nov4ou's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Nov4ou's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/13/properties-of-asymptotic-notations/" class="post-title-link" itemprop="url">Properties of Asymptotic Notations</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-08-13 23:27:43" itemprop="dateCreated datePublished" datetime="2022-08-13T23:27:43+08:00">2022-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-08-14 00:49:42" itemprop="dateModified" datetime="2022-08-14T00:49:42+08:00">2022-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Introduction-to-algorithm-3th/" itemprop="url" rel="index"><span itemprop="name">Introduction to algorithm, 3th</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations"></a>Asymptotic Notations</h1><blockquote>
+<p>  \begin{align}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \right. \\\\<br>    \left.\ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{align}</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/13/3-2-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -198,7 +312,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-08-13 12:28:56 / Modified: 18:39:16" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
+      <time title="Created: 2022-08-13 12:28:56 / Modified: 21:24:41" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -223,27 +337,14 @@
           <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
 <p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
 </blockquote>
-<h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
-<li><p>Base case: </p>
-<p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p>
-<p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p>
-</li>
-<li><p>Induction step:<br>Suppose $i=k,$</p>
-<ul>
-<li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p>
-</li>
-<li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p>
-</li>
-<li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p>
-</li>
-</ul>
-<p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p>
-<p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written</p>
-<p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
-<p>\begin{equation}<br>\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad<br>\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\blacksquare<br>\end{equation}</p>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/08/13/3-2-7/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -288,6 +389,8 @@
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
