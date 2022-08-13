@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Prove by induction that the iiith Fibonacci number satisfies the equality$E &#x3D; mc^2$">
+    <meta name="description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3.2-7">
 <meta property="og:url" content="http://example.com/2022/08/13/3-2-7/index.html">
 <meta property="og:site_name" content="Nov4ou&#39;s Blog">
-<meta property="og:description" content="Prove by induction that the iiith Fibonacci number satisfies the equality$E &#x3D; mc^2$">
+<meta property="og:description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-13T04:28:56.000Z">
-<meta property="article:modified_time" content="2022-08-13T05:40:15.861Z">
+<meta property="article:modified_time" content="2022-08-13T08:16:50.564Z">
 <meta property="article:author" content="Nov4ou">
 <meta name="twitter:card" content="summary">
 
@@ -103,7 +103,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -116,6 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem"><span class="nav-number">1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Proof"><span class="nav-number">2.</span> <span class="nav-text">Proof</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -128,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -203,7 +204,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-08-13 12:28:56 / Modified: 13:40:15" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
+      <time title="Created: 2022-08-13 12:28:56 / Modified: 16:16:50" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -225,10 +226,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <blockquote>
-<p>Prove by induction that the iiith Fibonacci number satisfies the equality<br>$E = mc^2$</p>
-</blockquote>
+        <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
+<p>Prove by induction that the $i$th Fibonacci number satisfies the equality</p>
+<script type="math/tex; mode=display">F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},</script><p>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation)</p>
+<script type="math/tex; mode=display">x^2 = x + 1</script></blockquote>
+<h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
+<li><p>Base case: </p>
+<p>For $i=0,$<br>\begin{align}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp; = \frac{1-1}{\sqrt{5}} \<br>&amp; = 0 \<br>&amp; = F_0.<br>\end{align}</p>
+</li>
+</ul>
+<!-- $$ 
 
+\sqrt{37} & = \sqrt{ \frac{73^2-1}{12^2}} \\
+& = \sqrt{ \frac{73^2}{12^2} \cdot \frac{73^2-1}{73^2}} \\
+& = \sqrt{ \frac{73^2}{12^2}}\sqrt{ \frac{73^2-1}{73^2}} \\
+& = \frac{73}{12} \sqrt{1 - \frac{1}{73^2}} \\
+& \approx \frac{73}{12} \left(1 - \frac{1}{2 \cdot73^2} \right)
+\end{align}
+$$ -->
     </div>
 
     
@@ -239,15 +254,6 @@
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/2022/08/13/hello-world/" rel="next" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
     </footer>
   </article>
 </div>
