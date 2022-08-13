@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roo">
+    <meta name="description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality\begin{equation}  F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},\end{equation}where $\phi$ is the golden ratio and $\hat{\p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3.2-7">
 <meta property="og:url" content="http://example.com/2022/08/13/3-2-7/index.html">
 <meta property="og:site_name" content="Nov4ou&#39;s Blog">
-<meta property="og:description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roo">
+<meta property="og:description" content="Problem Prove by induction that the $i$th Fibonacci number satisfies the equality\begin{equation}  F_i&#x3D; \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},\end{equation}where $\phi$ is the golden ratio and $\hat{\p">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-13T04:28:56.000Z">
-<meta property="article:modified_time" content="2022-08-13T08:16:50.564Z">
+<meta property="article:modified_time" content="2022-08-13T10:39:16.068Z">
 <meta property="article:author" content="Nov4ou">
 <meta name="twitter:card" content="summary">
 
@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-08-13 12:28:56 / Modified: 16:16:50" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
+      <time title="Created: 2022-08-13 12:28:56 / Modified: 18:39:16" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -227,23 +227,29 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
-<p>Prove by induction that the $i$th Fibonacci number satisfies the equality</p>
-<script type="math/tex; mode=display">F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},</script><p>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation)</p>
-<script type="math/tex; mode=display">x^2 = x + 1</script></blockquote>
+<p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
+</blockquote>
 <h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
 <li><p>Base case: </p>
-<p>For $i=0,$<br>\begin{align}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp; = \frac{1-1}{\sqrt{5}} \<br>&amp; = 0 \<br>&amp; = F_0.<br>\end{align}</p>
+<p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p>
+<p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p>
+</li>
+<li><p>Induction step:<br>Suppose $i=k,$</p>
+<ul>
+<li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p>
+</li>
+<li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p>
+</li>
+<li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p>
 </li>
 </ul>
-<!-- $$ 
+<p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p>
+<p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written</p>
+<p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
+<p>\begin{equation}<br>\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad<br>\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\blacksquare<br>\end{equation}</p>
+</li>
+</ul>
 
-\sqrt{37} & = \sqrt{ \frac{73^2-1}{12^2}} \\
-& = \sqrt{ \frac{73^2}{12^2} \cdot \frac{73^2-1}{73^2}} \\
-& = \sqrt{ \frac{73^2}{12^2}}\sqrt{ \frac{73^2-1}{73^2}} \\
-& = \frac{73}{12} \sqrt{1 - \frac{1}{73^2}} \\
-& \approx \frac{73}{12} \left(1 - \frac{1}{2 \cdot73^2} \right)
-\end{align}
-$$ -->
     </div>
 
     
