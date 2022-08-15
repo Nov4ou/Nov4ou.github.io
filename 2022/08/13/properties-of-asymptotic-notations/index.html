@@ -29,7 +29,7 @@
 <meta property="og:description" content="Asymptotic Notations:   \begin{align}    \Theta(g(n))&#x3D;\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \right. \\\\    \left.\ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-13T15:27:43.000Z">
-<meta property="article:modified_time" content="2022-08-15T11:37:09.572Z">
+<meta property="article:modified_time" content="2022-08-15T13:45:20.859Z">
 <meta property="article:author" content="Nov4ou">
 <meta property="article:tag" content="Algorithms">
 <meta name="twitter:card" content="summary">
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Asymptotic-Notations"><span class="nav-number">1.</span> <span class="nav-text">Asymptotic Notations:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">2.</span> <span class="nav-text">Properties:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflexivity"><span class="nav-number">2.1.</span> <span class="nav-text">Reflexivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symmetry"><span class="nav-number">2.2.</span> <span class="nav-text">Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transistivity"><span class="nav-number">2.3.</span> <span class="nav-text">Transistivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transpose-Symmetry"><span class="nav-number">2.4.</span> <span class="nav-text">Transpose Symmetry:</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Asymptotic-Notations"><span class="nav-number">1.</span> <span class="nav-text">Asymptotic Notations:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">2.</span> <span class="nav-text">Properties:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflexivity"><span class="nav-number">2.1.</span> <span class="nav-text">Reflexivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symmetry"><span class="nav-number">2.2.</span> <span class="nav-text">Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transistivity"><span class="nav-number">2.3.</span> <span class="nav-text">Transistivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transpose-Symmetry"><span class="nav-number">2.4.</span> <span class="nav-text">Transpose Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observations"><span class="nav-number">2.5.</span> <span class="nav-text">Observations:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-f-n-O-g-n-O-max-f-n-g-n"><span class="nav-number">2.6.</span> <span class="nav-text">$O(f(n))+O(g(n))&#x3D;O(max(f(n), g(n)))$</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -243,7 +243,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-08-15 19:37:09" itemprop="dateModified" datetime="2022-08-15T19:37:09+08:00">2022-08-15</time>
+      <time title="Modified: 2022-08-15 21:45:20" itemprop="dateModified" datetime="2022-08-15T21:45:20+08:00">2022-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,8 +278,10 @@
 <h2 id="Transpose-Symmetry"><a href="#Transpose-Symmetry" class="headerlink" title="Transpose Symmetry:"></a><strong>Transpose Symmetry:</strong></h2><p>\begin{equation}<br>f(n)=O(g(n)) \ if \ and \ only \ if \ g(n)=\Omega(f(n))<br>\end{equation}<br><em>Example:</em><br>if $f(n)=n$ and $g(n) = n^2$ then $n$ is $O(n^2)$ and $n^2$ is $\Omega(n)$<br><strong><em>Proof:</em></strong></p>
 <ul>
 <li><strong><em>Necessary part:</em></strong><br>\begin{equation}<br>f(n) = O(g(n)) \Rightarrow g(n) = \Omega(f(n))<br>\end{equation}<br>By the definition of $O \Rightarrow f(n) \leq cg(n)$ for some positive constant $c \Rightarrow g(n) \geq (\frac{1}{c}) \cdot f(n)$<br>By the definition if $\Omega$, $g(n)=\Omega(f(n))$</li>
-<li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n) = \Omega(f(n)) \Rightarrow f(n)=O(g(n))<br>\end{equation}<br>By the definition of $\Omega$, for some positive constants $c \Rightarrow g(n) \geq cf(n) \Rightarrow f(n) \leq (\frac{1}{c})\cdot g(n)$<br>By the definition of O, $f(n) = O(g(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=o(g(n)) \ if \ and \ only \ if \ g(n) = \omega(f(n))<br>\end{equation}</li>
+<li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n) = \nOmega(f(n)) \Rightarrow f(n)=O(g(n))<br>\end{equation}<br>By the definition of $\Omega$, for some positive constants $c \Rightarrow g(n) \geq cf(n) \Rightarrow f(n) \leq (\frac{1}{c})\cdot g(n)$<br>By the definition of O, $f(n) = O(g(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=o(g(n)) \ if \ and \ only \ if \ g(n) = \omega(f(n))<br>\end{equation}</li>
 </ul>
+<h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations:"></a><strong>Observations:</strong></h2><p>\begin{equation}<br>max(f(n), g(n)) = \Theta(f(n)+g(n))<br>\end{equation}<br><strong><em>Proof:</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$ $\Rightarrow max(f(n), g(n)) = g(n)$<br>Consider $g(n) \leq max(f(n), g(n)) \leq g(n)$<br>$\Rightarrow g(n) \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{g(n)}{2} + \frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>From what we assumed, we can write<br>$\Rightarrow \frac{f(n)}{2}+\frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{f(n)+g(n)}{2} \leq max（f(n), g(n)) \leq f(n)+g(n)$<br>By the definition of $\Theta$, $max(f(n), g(n)=\Theta(f(n)+g(n)))$</p>
+<h2 id="O-f-n-O-g-n-O-max-f-n-g-n"><a href="#O-f-n-O-g-n-O-max-f-n-g-n" class="headerlink" title="$O(f(n))+O(g(n))=O(max(f(n), g(n)))$"></a>$O(f(n))+O(g(n))=O(max(f(n), g(n)))$</h2><p><strong><em>Proof</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$<br>$<br>\Rightarrow<br>O(f(n)) + O(g(n)) = c_1 \cdot f(n) + c_2 \cdot g(n)<br>$<br>From what we assumed, we can write<br>\begin{equation}<br>O(f(n)) + O(g(n)) \leq c_1 \cdot g(n) + c_2 \cdot g(n) \\\\<br>\leq (c_1+c_2)g(n) \\\\<br>\leq cg(n) \\\\<br>\leq c \cdot max(f(n), g(n))<br>\end{equation}<br>By the definition of $O$,<br>\begin{equation}<br>O(f(n)) + O(g(n)) = O(max(f(n), g(n)))<br>\end{equation}</p>
 
     </div>
 
