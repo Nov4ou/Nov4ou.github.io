@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Properties of Asymptotic Notations</title>
-    <url>/2022/08/13/properties-of-asymptotic-notations/</url>
-    <content><![CDATA[<h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations:"></a>Asymptotic Notations:</h1><blockquote>
-<p>  \begin{align}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \right. \\\\<br>    \left.\ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{1}<br>    \end{align}<br>    \begin{align}<br>    O(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \\\\<br>    \left.\ such \ that \ 0 \leq f(n) \leq cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{2}<br>    \end{align}<br>    \begin{align}<br>    \Omega(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \\\\<br>    \left.\ such \ that \ 0 \leq cg(n) \leq f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{3}<br>    \end{align}<br>    \begin{align}<br>    o(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \\\\<br>    \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq f(n) &lt; cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{4}<br>    \end{align}<br>    \begin{align}<br>    \omega(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \\\\<br>    \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq cg(n) &lt; f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{5}<br>    \end{align}<br><span id="more"></span></p>
-</blockquote>
-<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties:"></a>Properties:</h1>]]></content>
-      <categories>
-        <category>Introduction to algorithm, 3th</category>
-      </categories>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3.2-7</title>
     <url>/2022/08/13/3-2-7/</url>
     <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
@@ -43,6 +29,23 @@
 
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>Introduction to algorithm, 3th</category>
+      </categories>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Properties of Asymptotic Notations</title>
+    <url>/2022/08/13/properties-of-asymptotic-notations/</url>
+    <content><![CDATA[<h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations:"></a>Asymptotic Notations:</h1><blockquote>
+<p>  \begin{align}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \right. \\\\<br>    \left.\ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{1}<br>    \end{align}<br>    \begin{align}<br>    O(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \\\\<br>    \left.\ such \ that \ 0 \leq f(n) \leq cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{2}<br>    \end{align}<br>    \begin{align}<br>    \Omega(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \\\\<br>    \left.\ such \ that \ 0 \leq cg(n) \leq f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{3}<br>    \end{align}<br>    \begin{align}<br>    o(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \\\\<br>    \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq f(n) &lt; cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{4}<br>    \end{align}<br>    \begin{align}<br>    \omega(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \\\\<br>    \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq cg(n) &lt; f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \tag{5}<br>    \end{align}<br><span id="more"></span></p>
+</blockquote>
+<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties:"></a>Properties:</h1><ol>
+<li>Reflexivity:<br> If $f(n)$ is given then</li>
+</ol>
 ]]></content>
       <categories>
         <category>Introduction to algorithm, 3th</category>
