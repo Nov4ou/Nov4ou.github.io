@@ -26,9 +26,11 @@
 <p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
 <p align="right">$\blacksquare$</p>
 
-
 </li>
 </ul>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><a href="https://walkccc.me/CLRS/Chap03/3.2/#32-7">Proof-by-induction</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>Introduction to algorithm, 3th</category>
@@ -57,6 +59,10 @@
 </ul>
 <h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations:"></a><strong>Observations:</strong></h2><p>\begin{equation}<br>max(f(n), g(n)) = \Theta(f(n)+g(n))<br>\end{equation}<br><strong><em>Proof:</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$ $\Rightarrow max(f(n), g(n)) = g(n)$<br>Consider $g(n) \leq max(f(n), g(n)) \leq g(n)$<br>$\Rightarrow g(n) \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{g(n)}{2} + \frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>From what we assumed, we can write<br>$\Rightarrow \frac{f(n)}{2}+\frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{f(n)+g(n)}{2} \leq max（f(n), g(n)) \leq f(n)+g(n)$<br>By the definition of $\Theta$, $max(f(n), g(n)=\Theta(f(n)+g(n)))$</p>
 <h2 id="O-f-n-O-g-n-O-max-f-n-g-n"><a href="#O-f-n-O-g-n-O-max-f-n-g-n" class="headerlink" title="$O(f(n))+O(g(n))=O(max(f(n), g(n)))$"></a>$O(f(n))+O(g(n))=O(max(f(n), g(n)))$</h2><p><strong><em>Proof</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$<br>$<br>\Rightarrow<br>O(f(n)) + O(g(n)) = c_1 \cdot f(n) + c_2 \cdot g(n)<br>$<br>From what we assumed, we can write<br>\begin{equation}<br>O(f(n)) + O(g(n)) \leq c_1 \cdot g(n) + c_2 \cdot g(n) \\\\<br>\leq (c_1+c_2)g(n) \\\\<br>\leq cg(n) \\\\<br>\leq c \cdot max(f(n), g(n))<br>\end{equation}<br>By the definition of $O$,<br>\begin{equation}<br>O(f(n)) + O(g(n)) = O(max(f(n), g(n)))<br>\end{equation}</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><a href="https://www.geeksforgeeks.org/properties-of-asymptotic-notations/">properties-of-asymptotic-notations</a></li>
+<li><a href="https://mitpress.mit.edu/9780262533058/">Introduction to Algorithms Third Edition</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>Introduction to algorithm, 3th</category>

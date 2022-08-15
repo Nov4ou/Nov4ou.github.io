@@ -29,7 +29,7 @@
 <meta property="og:description" content="Asymptotic Notations:   \begin{align}    \Theta(g(n))&#x3D;\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \right. \\\\    \left.\ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-13T15:27:43.000Z">
-<meta property="article:modified_time" content="2022-08-15T14:06:04.241Z">
+<meta property="article:modified_time" content="2022-08-15T14:25:38.284Z">
 <meta property="article:author" content="Nov4ou">
 <meta property="article:tag" content="Algorithms">
 <meta name="twitter:card" content="summary">
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Asymptotic-Notations"><span class="nav-number">1.</span> <span class="nav-text">Asymptotic Notations:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">2.</span> <span class="nav-text">Properties:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflexivity"><span class="nav-number">2.1.</span> <span class="nav-text">Reflexivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symmetry"><span class="nav-number">2.2.</span> <span class="nav-text">Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transistivity"><span class="nav-number">2.3.</span> <span class="nav-text">Transistivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transpose-Symmetry"><span class="nav-number">2.4.</span> <span class="nav-text">Transpose Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observations"><span class="nav-number">2.5.</span> <span class="nav-text">Observations:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-f-n-O-g-n-O-max-f-n-g-n"><span class="nav-number">2.6.</span> <span class="nav-text">$O(f(n))+O(g(n))&#x3D;O(max(f(n), g(n)))$</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Asymptotic-Notations"><span class="nav-number">1.</span> <span class="nav-text">Asymptotic Notations:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Properties"><span class="nav-number">2.</span> <span class="nav-text">Properties:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflexivity"><span class="nav-number">2.1.</span> <span class="nav-text">Reflexivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symmetry"><span class="nav-number">2.2.</span> <span class="nav-text">Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transistivity"><span class="nav-number">2.3.</span> <span class="nav-text">Transistivity:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transpose-Symmetry"><span class="nav-number">2.4.</span> <span class="nav-text">Transpose Symmetry:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observations"><span class="nav-number">2.5.</span> <span class="nav-text">Observations:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-f-n-O-g-n-O-max-f-n-g-n"><span class="nav-number">2.6.</span> <span class="nav-text">$O(f(n))+O(g(n))&#x3D;O(max(f(n), g(n)))$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -243,7 +243,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-08-15 22:06:04" itemprop="dateModified" datetime="2022-08-15T22:06:04+08:00">2022-08-15</time>
+      <time title="Modified: 2022-08-15 22:25:38" itemprop="dateModified" datetime="2022-08-15T22:25:38+08:00">2022-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,6 +282,10 @@
 </ul>
 <h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations:"></a><strong>Observations:</strong></h2><p>\begin{equation}<br>max(f(n), g(n)) = \Theta(f(n)+g(n))<br>\end{equation}<br><strong><em>Proof:</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$ $\Rightarrow max(f(n), g(n)) = g(n)$<br>Consider $g(n) \leq max(f(n), g(n)) \leq g(n)$<br>$\Rightarrow g(n) \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{g(n)}{2} + \frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>From what we assumed, we can write<br>$\Rightarrow \frac{f(n)}{2}+\frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)$<br>$\Rightarrow \frac{f(n)+g(n)}{2} \leq max（f(n), g(n)) \leq f(n)+g(n)$<br>By the definition of $\Theta$, $max(f(n), g(n)=\Theta(f(n)+g(n)))$</p>
 <h2 id="O-f-n-O-g-n-O-max-f-n-g-n"><a href="#O-f-n-O-g-n-O-max-f-n-g-n" class="headerlink" title="$O(f(n))+O(g(n))=O(max(f(n), g(n)))$"></a>$O(f(n))+O(g(n))=O(max(f(n), g(n)))$</h2><p><strong><em>Proof</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$<br>$<br>\Rightarrow<br>O(f(n)) + O(g(n)) = c_1 \cdot f(n) + c_2 \cdot g(n)<br>$<br>From what we assumed, we can write<br>\begin{equation}<br>O(f(n)) + O(g(n)) \leq c_1 \cdot g(n) + c_2 \cdot g(n) \\\\<br>\leq (c_1+c_2)g(n) \\\\<br>\leq cg(n) \\\\<br>\leq c \cdot max(f(n), g(n))<br>\end{equation}<br>By the definition of $O$,<br>\begin{equation}<br>O(f(n)) + O(g(n)) = O(max(f(n), g(n)))<br>\end{equation}</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/properties-of-asymptotic-notations/">properties-of-asymptotic-notations</a></li>
+<li><a target="_blank" rel="noopener" href="https://mitpress.mit.edu/9780262533058/">Introduction to Algorithms Third Edition</a></li>
+</ol>
 
     </div>
 
