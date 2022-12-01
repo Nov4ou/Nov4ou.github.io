@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Digital Clock Using 51 MCU</title>
+      <link href="/2022/12/01/digital-clock-by-51MCU/"/>
+      <url>/2022/12/01/digital-clock-by-51MCU/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p><blockquote><p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p><ol><li>Display(nixie tubes):<ul><li>Mode 1: Display current time in &quot;hour.minute&quot; format, and the dot flash every 0.5 second.</li><li>Mode 2: When the stopwatch time is under one minute, display in &quot;second.100 parts of a second&quot; format, the dot flash every 0.25 second; Otherwise display in &quot;minute.second&quot; format. the dot flash every one second.</li><li>Mode 3: Display current time in &quot;hour.minute&quot; format, the number which are going to be changed flash once per 0.5 second.</li><li>Mode 4: Just like mode 3, but change the alarm time.</li></ul></li><li>Keys:<ul><li>Mode 1:<ul><li>Key 1: Change to Mode 2;</li><li>Key 2: Check the alarm time/the current time;</li><li>Key 3: Turn on/off the alarm(display &quot;ON&quot; or &quot;OFF&quot; in nixie tubes for 1s);</li></ul></li><li>Mode 2:<ul><li>Key 1: Change to Mode 3;</li><li>Key 2: Start/Stop the stopwatch;</li><li>Key 3: Record current time when the stopwatch is running; Otherwise reset the stopwatch.</li><li>Key 4: If there are more than one lap, display the lap one by one; if reach the last lap, reset all lap;</li></ul></li><li>Mode 3:<ul><li>Key 1: Change to Mode 4;</li><li>Key 2: Switch the address of the time will be changed;</li><li>Key 3: Current number on the address plus one;</li><li>Key 4: Confirm the change;</li><li>Mode 4:<ul><li>Key 1: Change to Mode 1;</li><li>Key 2,3,4: As Mode 3;</li></ul></li></ul></li></ul></li><li>Other functions:<ul><li>When the key is pressed, the buzzer beeps briefly; report punctually(about 2s);</li><li>At the beginning of the program, read the alarm time from EEPROM; Save  the modified alarm time into EEPROM;</li></ul></li></ol></blockquote><h2 id="Program-Modules"><a href="#Program-Modules" class="headerlink" title="Program Modules"></a>Program Modules</h2><p>I will break the whole program into several blocks, each block has their own usage and finally combinate these blocks together.</p><h3 id="Nixie"><a href="#Nixie" class="headerlink" title="Nixie"></a>Nixie</h3><p>The nixie module is essential. The basic usage of nixie tubes are simple, but in this problem we should modify it a little bit.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MCU </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hardware </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Properties of Asymptotic Notations</title>
       <link href="/2022/08/13/properties-of-asymptotic-notations/"/>
       <url>/2022/08/13/properties-of-asymptotic-notations/</url>

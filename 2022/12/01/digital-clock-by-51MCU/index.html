@@ -21,23 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nov4ou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Nov4ou&#39;s Blog">
-<meta property="og:url" content="https://nov4ou.github.io/index.html">
+    <meta name="description" content="Implement Digital Clock by STC89C52PerliminariesThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Clock Using 51 MCU">
+<meta property="og:url" content="https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/index.html">
 <meta property="og:site_name" content="Nov4ou&#39;s Blog">
+<meta property="og:description" content="Implement Digital Clock by STC89C52PerliminariesThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-01T03:08:00.000Z">
+<meta property="article:modified_time" content="2022-12-01T15:10:32.700Z">
 <meta property="article:author" content="Nov4ou">
+<meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nov4ou.github.io/">
+<link rel="canonical" href="https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/","path":"2022/12/01/digital-clock-by-51MCU/","title":"Digital Clock Using 51 MCU"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Nov4ou's Blog</title>
+<title>Digital Clock Using 51 MCU | Nov4ou's Blog</title>
   
 
 
@@ -67,7 +72,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Nov4ou's Blog</h1>
+      <p class="site-title">Nov4ou's Blog</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -126,7 +131,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -139,6 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Implement-Digital-Clock-by-STC89C52"><span class="nav-number">1.</span> <span class="nav-text">Implement Digital Clock by STC89C52</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Perliminaries"><span class="nav-number">1.1.</span> <span class="nav-text">Perliminaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program-Modules"><span class="nav-number">1.2.</span> <span class="nav-text">Program Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nixie"><span class="nav-number">1.2.1.</span> <span class="nav-text">Nixie</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,16 +196,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -213,13 +220,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Nov4ou's Blog">
+      <meta itemprop="name" content="Digital Clock Using 51 MCU | Nov4ou's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/01/digital-clock-by-51MCU/" class="post-title-link" itemprop="url">Digital Clock Using 51 MCU</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Digital Clock Using 51 MCU
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -252,205 +259,55 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
+        <h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
 <blockquote>
-<p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/12/01/digital-clock-by-51MCU/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nov4ou.github.io/2022/08/13/properties-of-asymptotic-notations/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nov4ou">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nov4ou's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Nov4ou's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/13/properties-of-asymptotic-notations/" class="post-title-link" itemprop="url">Properties of Asymptotic Notations</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-08-13 23:27:43" itemprop="dateCreated datePublished" datetime="2022-08-13T23:27:43+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-01 21:39:24" itemprop="dateModified" datetime="2022-12-01T21:39:24+08:00">2022-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Introduction-to-algorithm-3th/" itemprop="url" rel="index"><span itemprop="name">Introduction to algorithm, 3th</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations:"></a>Asymptotic Notations:</h1><blockquote>
-<p>  \begin{equation}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    O(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq f(n) \leq cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \Omega(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq cg(n) \leq f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    o(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq f(n) &lt; cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \omega(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq cg(n) &lt; f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/08/13/properties-of-asymptotic-notations/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nov4ou.github.io/2022/08/13/3-2-7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nov4ou">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nov4ou's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Nov4ou's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/13/3-2-7/" class="post-title-link" itemprop="url">3.2-7</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-08-13 12:28:56" itemprop="dateCreated datePublished" datetime="2022-08-13T12:28:56+08:00">2022-08-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-12 14:22:36" itemprop="dateModified" datetime="2022-09-12T14:22:36+08:00">2022-09-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Introduction-to-algorithm-3th/" itemprop="url" rel="index"><span itemprop="name">Introduction to algorithm, 3th</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
-<p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
+<p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p>
+<ol>
+<li>Display(nixie tubes):<ul>
+<li>Mode 1: Display current time in &quot;hour.minute&quot; format, and the dot flash every 0.5 second.</li>
+<li>Mode 2: When the stopwatch time is under one minute, display in &quot;second.100 parts of a second&quot; format, the dot flash every 0.25 second; Otherwise display in &quot;minute.second&quot; format. the dot flash every one second.</li>
+<li>Mode 3: Display current time in &quot;hour.minute&quot; format, the number which are going to be changed flash once per 0.5 second.</li>
+<li>Mode 4: Just like mode 3, but change the alarm time.</li>
+</ul>
+</li>
+<li>Keys:<ul>
+<li>Mode 1:<ul>
+<li>Key 1: Change to Mode 2;</li>
+<li>Key 2: Check the alarm time/the current time;</li>
+<li>Key 3: Turn on/off the alarm(display &quot;ON&quot; or &quot;OFF&quot; in nixie tubes for 1s);</li>
+</ul>
+</li>
+<li>Mode 2:<ul>
+<li>Key 1: Change to Mode 3;</li>
+<li>Key 2: Start/Stop the stopwatch;</li>
+<li>Key 3: Record current time when the stopwatch is running; Otherwise reset the stopwatch.</li>
+<li>Key 4: If there are more than one lap, display the lap one by one; if reach the last lap, reset all lap;</li>
+</ul>
+</li>
+<li>Mode 3:<ul>
+<li>Key 1: Change to Mode 4;</li>
+<li>Key 2: Switch the address of the time will be changed;</li>
+<li>Key 3: Current number on the address plus one;</li>
+<li>Key 4: Confirm the change;</li>
+<li>Mode 4:<ul>
+<li>Key 1: Change to Mode 1;</li>
+<li>Key 2,3,4: As Mode 3;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other functions:<ul>
+<li>When the key is pressed, the buzzer beeps briefly; report punctually(about 2s);</li>
+<li>At the beginning of the program, read the alarm time from EEPROM; Save  the modified alarm time into EEPROM;</li>
+</ul>
+</li>
+</ol>
 </blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/08/13/3-2-7/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<h2 id="Program-Modules"><a href="#Program-Modules" class="headerlink" title="Program Modules"></a>Program Modules</h2><p>I will break the whole program into several blocks, each block has their own usage and finally combinate these blocks together.</p>
+<h3 id="Nixie"><a href="#Nixie" class="headerlink" title="Nixie"></a>Nixie</h3><p>The nixie module is essential. The basic usage of nixie tubes are simple, but in this problem we should modify it a little bit.</p>
+
     </div>
 
     
@@ -458,11 +315,42 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Nov4ou
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/" title="Digital Clock Using 51 MCU">https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hardware/" rel="tag"># Hardware</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/08/13/properties-of-asymptotic-notations/" rel="prev" title="Properties of Asymptotic Notations">
+                  <i class="fa fa-chevron-left"></i> Properties of Asymptotic Notations
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
