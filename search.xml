@@ -1,146 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Properties of Asymptotic Notations</title>
-    <url>/2022/08/13/properties-of-asymptotic-notations/</url>
-    <content><![CDATA[<h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations:"></a>Asymptotic Notations:</h1><blockquote>
-<p>  \begin{equation}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    O(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq f(n) \leq cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \Omega(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq cg(n) \leq f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    o(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq f(n) &lt; cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \omega(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq cg(n) &lt; f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br><span id="more"></span></p>
-</blockquote>
-<h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties:"></a>Properties:</h1><h2 id="Reflexivity"><a href="#Reflexivity" class="headerlink" title="Reflexivity:"></a><strong>Reflexivity:</strong></h2><p>If $f(n)$ is given then<br>\begin{equation}<br>f(n) = O(f(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n^3 \Rightarrow O(n^3)$<br>Similarly,<br>\begin{equation}<br>f(n) = Ω(f(n))<br>\end{equation}<br>\begin{equation}<br>f(n) = Θ(f(n))<br>\end{equation}</p>
-<h2 id="Symmetry"><a href="#Symmetry" class="headerlink" title="Symmetry:"></a><strong>Symmetry:</strong></h2><p>\begin{equation}<br>f(n) = \Theta(g(n)) \ if \ and \ only \ if \ g(n)=\Theta(f(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n^2$ and $g(n)=n^2$ then $f(n)=\Theta(n^2)$ and $g(n)=\Theta(n^2)$<br><strong><em>Proof:</em></strong></p>
-<ul>
-<li><strong><em>Necessary part:</em></strong><br>\begin{equation}<br>f(n) = \Theta(g(n)) \Rightarrow g(n) = \Theta(f(n))<br>\end{equation}<br>By the definition of $\Theta$, there exists positive constants $c_1$, $c_2$ and $n_0$ such that<br>\begin{equation}<br>0 \leq c_1g(n) \leq f(n) \leq c_2g(n)<br>\end{equation}<br>for all $n \geq n_0$<br>$\Rightarrow<br>g(n) \leq (\frac{1}{c_1}) \cdot f(n) \ and \ g(n) \geq (\frac{1}{c_2}) \cdot f(n)<br>$<br>$<br>\Rightarrow<br>(\frac{1}{c_2}) \cdot f(n) \leq g(n) \leq (\frac{1}{c_1}) \cdot f(n)<br>$<br>Since $c_1$ and $c_2$ are positive constants, $\frac{1}{c_1}$ and $\frac{1}{c_2}$ are well defined. Therefore, by the definitionof $\Theta$, $g(n)=\Theta(f(n))$</li>
-<li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n)=\Theta(f(n)) \Rightarrow f(n) = \Theta(g(n))<br>\end{equation}<br>By the definition of $\Theta$, there exists positive constants $c_1$, $c_2$ and $n_0$ such that<br>\begin{equation}<br>0 \leq c_1f(n) \leq g(n) \leq c_2f(n)<br>\end{equation}<br>for all $n \geq n_0$<br>$<br>\Rightarrow<br>f(n) \leq (\frac{1}{c_1}) \cdot g(n) \ and \ f(n) \geq (\frac{1}{c_2}0 \cdot g(n)<br>$<br>$<br>\Rightarrow<br>(\frac{1}{c_2}) \cdot g(n) \leq f(n) \leq (\frac{1}{c_1}) \cdot g(n)<br>$<br>By the definition of $\Theta$, $f(n)=\Theta(g(n))$</li>
-</ul>
-<h2 id="Transistivity"><a href="#Transistivity" class="headerlink" title="Transistivity:"></a><strong>Transistivity:</strong></h2><p>\begin{equation}<br>f(n)=O(g(n)) \ and \ g(n)=O(h(n)) \Rightarrow f(n)=O(H(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n$, $g(n)=n^2$ and $h(n)=n^3$<br>$\Rightarrow$ $n$ is $O(n^2)$ and $n^2$ is $O(n^3)$ then $n$ is $O(n^3)$<br><strong><em>Proof:</em></strong><br>\begin{equation}<br>f(n)=O(g(n)) \ and \ g(n) = O(h(n)) \Rightarrow f(n)=O(h(n))<br>\end{equation}<br>By the definition of $O$, there exists positive constants $c$, $n_0$ such that $f(n) \leq cg(n)$ for all $n \geq n_0$<br>$<br>\Rightarrow<br>f(n) \leq c_1g(n)<br>$<br>$<br>\Rightarrow<br>g(n) \leq c_2h(n)<br>$<br>$<br>\Rightarrow<br>f(n) \leq c_1c_2h(n)<br>$<br>$<br>\Rightarrow<br>f(n) \leq ch(n), where, c = c_1 \cdot c_2.<br>$<br>By the definition, $f(n) = O(h(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=\Theta(g(n)) \ and \ g(n) = \Theta(h(n)) \Rightarrow f(n)=\Theta(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=\Omega(g(n)) \ and \ g(n) = \Omega(h(n)) \Rightarrow f(n)=\Omega(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=o(g(n)) \ and \ g(n) = o(h(n)) \Rightarrow f(n)=o(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=\omega(g(n)) \ and \ g(n) = \omega(h(n)) \Rightarrow f(n)=\omega(h(n))<br>\end{equation}</p>
-<h2 id="Transpose-Symmetry"><a href="#Transpose-Symmetry" class="headerlink" title="Transpose Symmetry:"></a><strong>Transpose Symmetry:</strong></h2><p>\begin{equation}<br>f(n)=O(g(n)) \ if \ and \ only \ if \ g(n)=\Omega(f(n))<br>\end{equation}<br><em>Example:</em><br>if $f(n)=n$ and $g(n) = n^2$ then $n$ is $O(n^2)$ and $n^2$ is $\Omega(n)$<br><strong><em>Proof:</em></strong></p>
-<ul>
-<li><strong><em>Necessary part:</em></strong><br>\begin{equation}<br>f(n) = O(g(n)) \Rightarrow g(n) = \Omega(f(n))<br>\end{equation}<br>By the definition of $O \Rightarrow f(n) \leq cg(n)$ for some positive constant $c \Rightarrow g(n) \geq (\frac{1}{c}) \cdot f(n)$<br>By the definition if $\Omega$, $g(n)=\Omega(f(n))$</li>
-<li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n) = \Omega(f(n)) \Rightarrow f(n)=O(g(n))<br>\end{equation}<br>By the definition of $\Omega$, for some positive constants $c \Rightarrow g(n) \geq cf(n) \Rightarrow f(n) \leq (\frac{1}{c})\cdot g(n)$<br>By the definition of O, $f(n) = O(g(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=o(g(n)) \ if \ and \ only \ if \ g(n) = \omega(f(n))<br>\end{equation}</li>
-</ul>
-<h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations:"></a><strong>Observations:</strong></h2><p>\begin{equation}<br>max(f(n), g(n)) = \Theta(f(n)+g(n))<br>\end{equation}<br><strong><em>Proof:</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$ $\Rightarrow max(f(n), g(n)) = g(n)$<br>Consider $g(n) \leq max(f(n), g(n)) \leq g(n)$<br>\begin{align}<br>&amp; \Rightarrow g(n) \leq max(f(n), g(n)) \leq f(n) + g(n) \\<br>&amp; \Rightarrow \frac{g(n)}{2} + \frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)<br>\end{align}<br>From what we assumed, we can write<br>\begin{equation}\Rightarrow \frac{f(n)}{2}+\frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)\end{equation}<br>\begin{equation}\Rightarrow \frac{f(n)+g(n)}{2} \leq max（f(n), g(n)) \leq f(n)+g(n)\end{equation}<br>By the definition of $\Theta$, $max(f(n), g(n)=\Theta(f(n)+g(n)))$</p>
-<h2 id="O-f-n-O-g-n-O-max-f-n-g-n"><a href="#O-f-n-O-g-n-O-max-f-n-g-n" class="headerlink" title="O(f(n))+O(g(n))=O(max(f(n), g(n)))"></a>O(f(n))+O(g(n))=O(max(f(n), g(n)))</h2><p><strong><em>Proof</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$<br>\[\Rightarrow<br>O(f(n)) + O(g(n)) = c_1 \cdot f(n) + c_2 \cdot g(n)\]<br>From what we assumed, we can write<br>\begin{equation}<br>O(f(n)) + O(g(n)) \leq c_1 \cdot g(n) + c_2 \cdot g(n) \\\\<br>\leq (c_1+c_2)g(n) \\\\<br>\leq cg(n) \\\\<br>\leq c \cdot max(f(n), g(n))<br>\end{equation}<br>By the definition of $O$,<br>\begin{equation}<br>O(f(n)) + O(g(n)) = O(max(f(n), g(n)))<br>\end{equation}</p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
-<li><a href="https://www.geeksforgeeks.org/properties-of-asymptotic-notations/">properties-of-asymptotic-notations</a></li>
-<li><a href="https://mitpress.mit.edu/9780262533058/">Introduction to Algorithms Third Edition</a></li>
-</ol>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>vmess</title>
+      <link href="/2022/12/02/vmess/"/>
+      <url>/2022/12/02/vmess/</url>
+      
+        <content type="html"><![CDATA[<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ19ub3Y0b3UudGsiLAogICJhZGQiOiAibm92NG91LnRrIiwKICAicG9ydCI6ICIxNDciLAogICJpZCI6ICI4ZDZlMmU2OC0yMGI4LTQ0NzgtYWJiZi1mMTIzYzgzNjg1ZmQiLAogICJhaWQiOiAiIiwKICAibmV0IjogIndzIiwKICAidHlwZSI6ICJub25lIiwKICAiaG9zdCI6ICJub3Y0b3UudGsiLAogICJwYXRoIjogIi85MGZmYmI2NDIxYWIvIiwKICAidGxzIjogInRscyIKfQo=<br><span id="more"></span></p><h2 id="QR-code"><a href="#QR-code" class="headerlink" title="QR code"></a>QR code</h2><p><img src="/images/qrcode.png" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>Introduction to algorithm, 3th</category>
+          
+          <category> Useless Stuff </category>
+          
       </categories>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.2-7</title>
-    <url>/2022/08/13/3-2-7/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
-<p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
-<li><p>Base case: </p>
-<p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p>
-<p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p>
-</li>
-<li><p>Induction step:<br>Suppose $i=k,$</p>
-<ul>
-<li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p>
-</li>
-<li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p>
-</li>
-<li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p>
-</li>
-</ul>
-<p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p>
-<p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written as</p>
-<p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
-<p align="right">$\blacksquare$</p>
-
-</li>
-</ul>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
-<li><a href="https://walkccc.me/CLRS/Chap03/3.2/#32-7">Proof-by-induction</a></li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Useless Stuff </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Digital Clock Using 51 MCU</title>
+      <link href="/2022/12/01/digital-clock-by-51MCU/"/>
+      <url>/2022/12/01/digital-clock-by-51MCU/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p><blockquote><p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p><ol><li>Display(nixie tubes):<ul><li>Mode 1: Display current time in &quot;hour.minute&quot; format, and the dot flash every 0.5 second.</li><li>Mode 2: When the stopwatch time is under one minute, display in &quot;second.100 parts of a second&quot; format, the dot flash every 0.25 second; Otherwise display in &quot;minute.second&quot; format. the dot flash every one second.</li><li>Mode 3: Display current time in &quot;hour.minute&quot; format, the number which are going to be changed flash once per 0.5 second.</li><li>Mode 4: Just like mode 3, but change the alarm time.</li></ul></li><li>Keys:<ul><li>Mode 1:<ul><li>Key 1: Change to Mode 2;</li><li>Key 2: Check the alarm time/the current time;</li><li>Key 3: Turn on/off the alarm(display &quot;ON&quot; or &quot;OFF&quot; in nixie tubes for 1s);</li></ul></li><li>Mode 2:<ul><li>Key 1: Change to Mode 3;</li><li>Key 2: Start/Stop the stopwatch;</li><li>Key 3: Record current time when the stopwatch is running; Otherwise reset the stopwatch.</li><li>Key 4: If there are more than one lap, display the lap one by one; if reach the last lap, reset all lap;</li></ul></li><li>Mode 3:<ul><li>Key 1: Change to Mode 4;</li><li>Key 2: Switch the address of the time will be changed;</li><li>Key 3: Current number on the address plus one;</li><li>Key 4: Confirm the change;</li></ul></li><li>Mode 4:<ul><li>Key 1: Change to Mode 1;</li><li>Key 2,3,4: As Mode 3;</li></ul></li></ul></li><li>Other functions:<ul><li>When the key is pressed, the buzzer beeps briefly; report punctually(about 2s);</li><li>At the beginning of the program, read the alarm time from EEPROM; Save  the modified alarm time into EEPROM;</li></ul></li></ol></blockquote><h2 id="Program-Modules"><a href="#Program-Modules" class="headerlink" title="Program Modules"></a>Program Modules</h2><p>I will break the whole program into several blocks, each block has their own usage and finally combinate these blocks together.</p><h3 id="Timers"><a href="#Timers" class="headerlink" title="Timers"></a>Timers</h3><p>We will use two timers, one for the UART module, one for the rest functions which can save a lot effort by using timer.</p><h4 id="Timer0"><a href="#Timer0" class="headerlink" title="Timer0"></a>Timer0</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;REGX52.H&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Timer0_Init</span><span class="params">(<span class="type">void</span>)</span><span class="comment">//1ms@12.000MHz</span></span><br><span class="line">&#123;</span><br><span class="line">    TMOD &amp;= <span class="number">0xF0</span>;<span class="comment">//Set timer work mode</span></span><br><span class="line">    TMOD |= <span class="number">0x01</span>;<span class="comment">//Set timer work mode   </span></span><br><span class="line">    TL0 = <span class="number">0x18</span>;    <span class="comment">//Initial timer value</span></span><br><span class="line">    TH0 = <span class="number">0xFC</span>;    <span class="comment">//Initial timer value</span></span><br><span class="line">    TF0 = <span class="number">0</span>;    <span class="comment">//Clear TF0 flag</span></span><br><span class="line">    TR0 = <span class="number">1</span>;    <span class="comment">//Timer0 start run</span></span><br><span class="line">    ET0 = <span class="number">1</span>;</span><br><span class="line">    EA = <span class="number">1</span>;</span><br><span class="line">    PT0 = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Timer0_Routine</span><span class="params">()</span> interrupt 1</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">unsigned</span> <span class="type">int</span> T0Count1;</span><br><span class="line">    TL0 = <span class="number">0x18</span>;</span><br><span class="line">    TH0 = <span class="number">0xFC</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        other modules;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="UART-Timer"><a href="#UART-Timer" class="headerlink" title="UART Timer"></a>UART Timer</h4><p>The second Timer is used for the UART fuction(Timer1).<br>Set <code>UART</code> first:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Uart_Init</span><span class="params">(<span class="type">void</span>)</span><span class="comment">//4800bps@11.0592MHz</span></span><br><span class="line">&#123;</span><br><span class="line">PCON |= <span class="number">0x80</span>;<span class="comment">//Enable SMOD bit</span></span><br><span class="line">SCON = <span class="number">0x50</span>;<span class="comment">//8 bits and variable baudrate</span></span><br><span class="line">TMOD &amp;= <span class="number">0x0F</span>;<span class="comment">//Set timer work mode</span></span><br><span class="line">TMOD |= <span class="number">0x20</span>;<span class="comment">//Set timer work mode</span></span><br><span class="line">TL1 = <span class="number">0xF4</span>;<span class="comment">//Initial timer value</span></span><br><span class="line">TH1 = <span class="number">0xF4</span>;<span class="comment">//Set reload value</span></span><br><span class="line">ET1 = <span class="number">0</span>;<span class="comment">//Disable Timer%d interrupt</span></span><br><span class="line">TR1 = <span class="number">1</span>;<span class="comment">//Timer1 start run</span></span><br><span class="line">EA = <span class="number">1</span>;</span><br><span class="line">ES = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><strong>Note: Make sure you choose your MCU Frequency correctly. Usually it&#39;s 12MHz or 11.0592MHz.</strong></p><h4 id="Timer-Conflict"><a href="#Timer-Conflict" class="headerlink" title="Timer Conflict"></a>Timer Conflict</h4><p>If you use these two timers at the same time, you probably find that the <code>UART_Timer</code> will make <code>Timer0</code> slower and the <code>Nixie</code> module will be affected so the nixie tubes will flick. So it&#39;s better only use <code>UART_Init</code> when should use. In other words, only should you use <code>UART_Init</code> in <code>Mode 3</code> and <code>Mode 4</code>. In <code>Mode 1</code> and <code>Mode 2</code> you should &#39;antiinit&#39; the UART module.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Uart_antiInit</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">TR1 = <span class="number">0</span>;               <span class="comment">//Disable the timer1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="Nixie"><a href="#Nixie" class="headerlink" title="Nixie"></a>Nixie</h3><p>The nixie module is essential. The basic usage of nixie tubes are simple, but in this problem we should modify it a little bit.<br>The second address in the nixie tubes should display the dot with the number at the same time. Also sometime you may want display nothing(not even be ligthed).<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">unsigned</span> <span class="type">char</span> NixieTable[] = &#123;<span class="number">0x3F</span>, <span class="number">0x06</span>, <span class="number">0x5B</span>, <span class="number">0x4F</span>, <span class="number">0x66</span>, <span class="number">0x6D</span>, <span class="number">0x7D</span>, <span class="number">0x07</span>, <span class="number">0x7F</span>, <span class="number">0x6F</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x71</span>, <span class="number">0x37</span>&#125;;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">char</span> NixieTable_Float[] = &#123;<span class="number">0xBF</span>, <span class="number">0x86</span>, <span class="number">0xDB</span>, <span class="number">0xCF</span>, <span class="number">0xE6</span>, <span class="number">0xED</span>, <span class="number">0xFD</span>,<span class="number">0x87</span>, <span class="number">0xFF</span>, <span class="number">0xEF</span>, <span class="number">0x00</span>, <span class="number">0x40</span>&#125;;</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
       <categories>
-        <category>Introduction to algorithm, 3th</category>
+          
+          <category> MCU </category>
+          
       </categories>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Digital Clock Using 51 MCU</title>
-    <url>/2022/12/01/digital-clock-by-51MCU/</url>
-    <content><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
-<blockquote>
-<p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p>
-<ol>
-<li>Display(nixie tubes):<ul>
-<li>Mode 1: Display current time in &quot;hour.minute&quot; format, and the dot flash every 0.5 second.</li>
-<li>Mode 2: When the stopwatch time is under one minute, display in &quot;second.100 parts of a second&quot; format, the dot flash every 0.25 second; Otherwise display in &quot;minute.second&quot; format. the dot flash every one second.</li>
-<li>Mode 3: Display current time in &quot;hour.minute&quot; format, the number which are going to be changed flash once per 0.5 second.</li>
-<li>Mode 4: Just like mode 3, but change the alarm time.</li>
-</ul>
-</li>
-<li>Keys:<ul>
-<li>Mode 1:<ul>
-<li>Key 1: Change to Mode 2;</li>
-<li>Key 2: Check the alarm time/the current time;</li>
-<li>Key 3: Turn on/off the alarm(display &quot;ON&quot; or &quot;OFF&quot; in nixie tubes for 1s);</li>
-</ul>
-</li>
-<li>Mode 2:<ul>
-<li>Key 1: Change to Mode 3;</li>
-<li>Key 2: Start/Stop the stopwatch;</li>
-<li>Key 3: Record current time when the stopwatch is running; Otherwise reset the stopwatch.</li>
-<li>Key 4: If there are more than one lap, display the lap one by one; if reach the last lap, reset all lap;</li>
-</ul>
-</li>
-<li>Mode 3:<ul>
-<li>Key 1: Change to Mode 4;</li>
-<li>Key 2: Switch the address of the time will be changed;</li>
-<li>Key 3: Current number on the address plus one;</li>
-<li>Key 4: Confirm the change;</li>
-</ul>
-</li>
-<li>Mode 4:<ul>
-<li>Key 1: Change to Mode 1;</li>
-<li>Key 2,3,4: As Mode 3;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Other functions:<ul>
-<li>When the key is pressed, the buzzer beeps briefly; report punctually(about 2s);</li>
-<li>At the beginning of the program, read the alarm time from EEPROM; Save  the modified alarm time into EEPROM;</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<h2 id="Program-Modules"><a href="#Program-Modules" class="headerlink" title="Program Modules"></a>Program Modules</h2><p>I will break the whole program into several blocks, each block has their own usage and finally combinate these blocks together.</p>
-<h3 id="Nixie"><a href="#Nixie" class="headerlink" title="Nixie"></a>Nixie</h3><p>The nixie module is essential. The basic usage of nixie tubes are simple, but in this problem we should modify it a little bit.</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Hardware </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Properties of Asymptotic Notations</title>
+      <link href="/2022/08/13/properties-of-asymptotic-notations/"/>
+      <url>/2022/08/13/properties-of-asymptotic-notations/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Asymptotic-Notations"><a href="#Asymptotic-Notations" class="headerlink" title="Asymptotic Notations:"></a>Asymptotic Notations:</h1><blockquote><p>  \begin{equation}<br>    \Theta(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c_1, \ c_2, \ and \ n_0 \ such \ that \ 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    O(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq f(n) \leq cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \Omega(g(n))=\left.\{ f(n): there \ exist \ positive \ constants \ c \ and \ n_0<br>    \right. \left.\ such \ that \ 0 \leq cg(n) \leq f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    o(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq f(n) &lt; cg(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br>    \begin{equation}<br>    \omega(g(n))=\left.\{ f(n): for \ any \ positive \ constant \ c&gt;0, \ there \ exist<br>    \right. \left.\ a \ constant \ n_0&gt;0 \ such \ that \ 0 \leq cg(n) &lt; f(n) \ for \ all \ n \geq n_0 \right\}.<br>    \end{equation}<br><span id="more"></span></p></blockquote><h1 id="Properties"><a href="#Properties" class="headerlink" title="Properties:"></a>Properties:</h1><h2 id="Reflexivity"><a href="#Reflexivity" class="headerlink" title="Reflexivity:"></a><strong>Reflexivity:</strong></h2><p>If $f(n)$ is given then<br>\begin{equation}<br>f(n) = O(f(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n^3 \Rightarrow O(n^3)$<br>Similarly,<br>\begin{equation}<br>f(n) = Ω(f(n))<br>\end{equation}<br>\begin{equation}<br>f(n) = Θ(f(n))<br>\end{equation}</p><h2 id="Symmetry"><a href="#Symmetry" class="headerlink" title="Symmetry:"></a><strong>Symmetry:</strong></h2><p>\begin{equation}<br>f(n) = \Theta(g(n)) \ if \ and \ only \ if \ g(n)=\Theta(f(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n^2$ and $g(n)=n^2$ then $f(n)=\Theta(n^2)$ and $g(n)=\Theta(n^2)$<br><strong><em>Proof:</em></strong></p><ul><li><strong><em>Necessary part:</em></strong><br>\begin{equation}<br>f(n) = \Theta(g(n)) \Rightarrow g(n) = \Theta(f(n))<br>\end{equation}<br>By the definition of $\Theta$, there exists positive constants $c_1$, $c_2$ and $n_0$ such that<br>\begin{equation}<br>0 \leq c_1g(n) \leq f(n) \leq c_2g(n)<br>\end{equation}<br>for all $n \geq n_0$<br>$\Rightarrow<br>g(n) \leq (\frac{1}{c_1}) \cdot f(n) \ and \ g(n) \geq (\frac{1}{c_2}) \cdot f(n)<br>$<br>$<br>\Rightarrow<br>(\frac{1}{c_2}) \cdot f(n) \leq g(n) \leq (\frac{1}{c_1}) \cdot f(n)<br>$<br>Since $c_1$ and $c_2$ are positive constants, $\frac{1}{c_1}$ and $\frac{1}{c_2}$ are well defined. Therefore, by the definitionof $\Theta$, $g(n)=\Theta(f(n))$</li><li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n)=\Theta(f(n)) \Rightarrow f(n) = \Theta(g(n))<br>\end{equation}<br>By the definition of $\Theta$, there exists positive constants $c_1$, $c_2$ and $n_0$ such that<br>\begin{equation}<br>0 \leq c_1f(n) \leq g(n) \leq c_2f(n)<br>\end{equation}<br>for all $n \geq n_0$<br>$<br>\Rightarrow<br>f(n) \leq (\frac{1}{c_1}) \cdot g(n) \ and \ f(n) \geq (\frac{1}{c_2}0 \cdot g(n)<br>$<br>$<br>\Rightarrow<br>(\frac{1}{c_2}) \cdot g(n) \leq f(n) \leq (\frac{1}{c_1}) \cdot g(n)<br>$<br>By the definition of $\Theta$, $f(n)=\Theta(g(n))$</li></ul><h2 id="Transistivity"><a href="#Transistivity" class="headerlink" title="Transistivity:"></a><strong>Transistivity:</strong></h2><p>\begin{equation}<br>f(n)=O(g(n)) \ and \ g(n)=O(h(n)) \Rightarrow f(n)=O(H(n))<br>\end{equation}<br><em>Example:</em><br>If $f(n)=n$, $g(n)=n^2$ and $h(n)=n^3$<br>$\Rightarrow$ $n$ is $O(n^2)$ and $n^2$ is $O(n^3)$ then $n$ is $O(n^3)$<br><strong><em>Proof:</em></strong><br>\begin{equation}<br>f(n)=O(g(n)) \ and \ g(n) = O(h(n)) \Rightarrow f(n)=O(h(n))<br>\end{equation}<br>By the definition of $O$, there exists positive constants $c$, $n_0$ such that $f(n) \leq cg(n)$ for all $n \geq n_0$<br>$<br>\Rightarrow<br>f(n) \leq c_1g(n)<br>$<br>$<br>\Rightarrow<br>g(n) \leq c_2h(n)<br>$<br>$<br>\Rightarrow<br>f(n) \leq c_1c_2h(n)<br>$<br>$<br>\Rightarrow<br>f(n) \leq ch(n), where, c = c_1 \cdot c_2.<br>$<br>By the definition, $f(n) = O(h(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=\Theta(g(n)) \ and \ g(n) = \Theta(h(n)) \Rightarrow f(n)=\Theta(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=\Omega(g(n)) \ and \ g(n) = \Omega(h(n)) \Rightarrow f(n)=\Omega(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=o(g(n)) \ and \ g(n) = o(h(n)) \Rightarrow f(n)=o(h(n))<br>\end{equation}<br>\begin{equation}<br>f(n)=\omega(g(n)) \ and \ g(n) = \omega(h(n)) \Rightarrow f(n)=\omega(h(n))<br>\end{equation}</p><h2 id="Transpose-Symmetry"><a href="#Transpose-Symmetry" class="headerlink" title="Transpose Symmetry:"></a><strong>Transpose Symmetry:</strong></h2><p>\begin{equation}<br>f(n)=O(g(n)) \ if \ and \ only \ if \ g(n)=\Omega(f(n))<br>\end{equation}<br><em>Example:</em><br>if $f(n)=n$ and $g(n) = n^2$ then $n$ is $O(n^2)$ and $n^2$ is $\Omega(n)$<br><strong><em>Proof:</em></strong></p><ul><li><strong><em>Necessary part:</em></strong><br>\begin{equation}<br>f(n) = O(g(n)) \Rightarrow g(n) = \Omega(f(n))<br>\end{equation}<br>By the definition of $O \Rightarrow f(n) \leq cg(n)$ for some positive constant $c \Rightarrow g(n) \geq (\frac{1}{c}) \cdot f(n)$<br>By the definition if $\Omega$, $g(n)=\Omega(f(n))$</li><li><strong><em>Sufficiency part:</em></strong><br>\begin{equation}<br>g(n) = \Omega(f(n)) \Rightarrow f(n)=O(g(n))<br>\end{equation}<br>By the definition of $\Omega$, for some positive constants $c \Rightarrow g(n) \geq cf(n) \Rightarrow f(n) \leq (\frac{1}{c})\cdot g(n)$<br>By the definition of O, $f(n) = O(g(n))$<br>Similarly,<br>\begin{equation}<br>f(n)=o(g(n)) \ if \ and \ only \ if \ g(n) = \omega(f(n))<br>\end{equation}</li></ul><h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations:"></a><strong>Observations:</strong></h2><p>\begin{equation}<br>max(f(n), g(n)) = \Theta(f(n)+g(n))<br>\end{equation}<br><strong><em>Proof:</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$ $\Rightarrow max(f(n), g(n)) = g(n)$<br>Consider $g(n) \leq max(f(n), g(n)) \leq g(n)$<br>\begin{align}<br>&amp; \Rightarrow g(n) \leq max(f(n), g(n)) \leq f(n) + g(n) \\<br>&amp; \Rightarrow \frac{g(n)}{2} + \frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)<br>\end{align}<br>From what we assumed, we can write<br>\begin{equation}\Rightarrow \frac{f(n)}{2}+\frac{g(n)}{2} \leq max(f(n), g(n)) \leq f(n) + g(n)\end{equation}<br>\begin{equation}\Rightarrow \frac{f(n)+g(n)}{2} \leq max（f(n), g(n)) \leq f(n)+g(n)\end{equation}<br>By the definition of $\Theta$, $max(f(n), g(n)=\Theta(f(n)+g(n)))$</p><h2 id="O-f-n-O-g-n-O-max-f-n-g-n"><a href="#O-f-n-O-g-n-O-max-f-n-g-n" class="headerlink" title="O(f(n))+O(g(n))=O(max(f(n), g(n)))"></a>O(f(n))+O(g(n))=O(max(f(n), g(n)))</h2><p><strong><em>Proof</em></strong><br>Without loss of generality, assume $f(n) \leq g(n)$<br>\[\Rightarrow<br>O(f(n)) + O(g(n)) = c_1 \cdot f(n) + c_2 \cdot g(n)\]<br>From what we assumed, we can write<br>\begin{equation}<br>O(f(n)) + O(g(n)) \leq c_1 \cdot g(n) + c_2 \cdot g(n) \\\\<br>\leq (c_1+c_2)g(n) \\\\<br>\leq cg(n) \\\\<br>\leq c \cdot max(f(n), g(n))<br>\end{equation}<br>By the definition of $O$,<br>\begin{equation}<br>O(f(n)) + O(g(n)) = O(max(f(n), g(n)))<br>\end{equation}</p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol><li><a href="https://www.geeksforgeeks.org/properties-of-asymptotic-notations/">properties-of-asymptotic-notations</a></li><li><a href="https://mitpress.mit.edu/9780262533058/">Introduction to Algorithms Third Edition</a></li></ol>]]></content>
+      
+      
       <categories>
-        <category>MCU</category>
+          
+          <category> Introduction to algorithm, 3th </category>
+          
       </categories>
-      <tags>
-        <tag>Hardware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vmess</title>
-    <url>/2022/12/02/vmess/</url>
-    <content><![CDATA[<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ19ub3Y0b3UudGsiLAogICJhZGQiOiAibm92NG91LnRrIiwKICAicG9ydCI6ICIxNDciLAogICJpZCI6ICI4ZDZlMmU2OC0yMGI4LTQ0NzgtYWJiZi1mMTIzYzgzNjg1ZmQiLAogICJhaWQiOiAiIiwKICAibmV0IjogIndzIiwKICAidHlwZSI6ICJub25lIiwKICAiaG9zdCI6ICJub3Y0b3UudGsiLAogICJwYXRoIjogIi85MGZmYmI2NDIxYWIvIiwKICAidGxzIjogInRscyIKfQo=<br><span id="more"></span></p>
-<h2 id="QR-code"><a href="#QR-code" class="headerlink" title="QR code"></a>QR code</h2><p><img src="/images/qrcode.png" alt=""></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Algorithms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3.2-7</title>
+      <link href="/2022/08/13/3-2-7/"/>
+      <url>/2022/08/13/3-2-7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote><p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p></blockquote><span id="more"></span><h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul><li><p>Base case: </p><p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p><p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p></li><li><p>Induction step:<br>Suppose $i=k,$</p><ul><li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p></li><li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p></li><li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p></li></ul><p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p><p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written as</p><p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p><p align="right">$\blacksquare$</p></li></ul><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol><li><a href="https://walkccc.me/CLRS/Chap03/3.2/#32-7">Proof-by-induction</a></li></ol>]]></content>
+      
+      
       <categories>
-        <category>Useless Stuff</category>
+          
+          <category> Introduction to algorithm, 3th </category>
+          
       </categories>
-      <tags>
-        <tag>Useless Stuff</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Algorithms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
