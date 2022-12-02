@@ -91,7 +91,7 @@
   border-bottom: 4px solid #000000;
   color: #fbfbfb;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   text-shadow: 1px 1px 1px rgba(0,0,0,.4);
   font-size: 15px;
   text-align: left;
