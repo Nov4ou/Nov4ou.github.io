@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>3.2-7</title>
+    <url>/2022/08/13/3-2-7/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
+<p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
+<li><p>Base case: </p>
+<p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p>
+<p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p>
+</li>
+<li><p>Induction step:<br>Suppose $i=k,$</p>
+<ul>
+<li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p>
+</li>
+<li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p>
+</li>
+<li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p>
+</li>
+</ul>
+<p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p>
+<p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written as</p>
+<p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
+<p align="right">$\blacksquare$</p>
+
+</li>
+</ul>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><a href="https://walkccc.me/CLRS/Chap03/3.2/#32-7">Proof-by-induction</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Introduction to algorithm, 3th</category>
+      </categories>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Digital Clock Using 51 MCU</title>
     <url>/2022/12/01/digital-clock-by-51MCU/</url>
     <content><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
@@ -65,42 +104,25 @@
       </tags>
   </entry>
   <entry>
-    <title>3.2-7</title>
-    <url>/2022/08/13/3-2-7/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><blockquote>
-<p>Prove by induction that the $i$th Fibonacci number satisfies the equality<br>\begin{equation}<br>  F_i= \frac{\phi^i-\hat{\phi}^i}{\sqrt{5}},<br>\end{equation}<br>where $\phi$ is the golden ratio and $\hat{\phi}$​ is its conjugate.(two roots of the equation）<br>\begin{equation}<br>  x^2 = x + 1<br>\end{equation}</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h1><ul>
-<li><p>Base case: </p>
-<p>For $i=0,$<br>\begin{equation}<br>\begin{aligned}<br>\frac{\phi^0-\hat{\phi}^0}{\sqrt{5}} &amp;= \frac{1-1}{\sqrt{5}} \\\\<br>  &amp;= 0 \\\\<br>  &amp;= F_0.<br>\end{aligned}<br>\end{equation}</p>
-<p>For $i=1,$<br>\begin{aligned}<br>\frac{\phi^1-\hat{\phi}^1}{\sqrt{5}} &amp;= \frac{(1+\sqrt{5})-(1-\sqrt{5})}{2\sqrt{5}} \\\\<br>  &amp;= 1 \\\\<br>  &amp;= F_1.<br>\end{aligned}</p>
-</li>
-<li><p>Induction step:<br>Suppose $i=k,$</p>
-<ul>
-<li><p>$<br>F_k = \frac{\phi^k-\hat{\phi}^k}{\sqrt{5}},<br>\tag{1}<br>$</p>
-</li>
-<li><p>$<br>F_{k-1} = \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}}and<br>\tag{3}<br>$</p>
-</li>
-<li><p>$<br>F_{k+1} = \frac{\phi^{k+1}-\hat{\phi}^{k+1}}{\sqrt{5}}<br>\tag{2}<br>$</p>
-</li>
-</ul>
-<p>\begin{aligned}<br>F_{k-1} + F_{k} &amp;= \frac{\phi^{k-1}-\hat{\phi}^{k-1}}{\sqrt{5}} + \frac{\phi^{k}-\hat{\phi}^{k}}{\sqrt{5}} \\\\<br>  &amp;= \frac{\phi^{k-1}(1+\phi) - \hat{\phi}^{k-1}(1+\hat{\phi})}{\sqrt{5}}<br>\end{aligned}</p>
-<p>Because $\phi$ and $\hat{\phi}$ are two roots of $ x^2 = x + 1$, above equation can be written as</p>
-<p>\begin{aligned}<br>\frac{\phi^{k-1} \cdot \phi^2 - \hat{\phi}^{k-1} \cdot \hat{\phi}^2}{\sqrt{5}} &amp;= \frac{\phi^{k+1} - \hat{\phi}^{k+1}}{\sqrt{5}} \\\\<br> &amp;= F_{k+1}.<br>\end{aligned}</p>
-<p align="right">$\blacksquare$</p>
-
-</li>
-</ul>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
-<li><a href="https://walkccc.me/CLRS/Chap03/3.2/#32-7">Proof-by-induction</a></li>
-</ol>
-]]></content>
+    <title>vmess</title>
+    <url>/2022/12/02/vmess/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oops, try again." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="42158d5cee0c5ceb5f55001ddc2af588ec0d185a838ea01d6b84761a4b9b2bf0">22064b17c03cb0c0e58c99349b6889d04da46185588523f900d7c5ae54c146cc529c7b0164c02e95ea1f2ba6c510c6ce4ab0a612545b4d08989e52bb5a7814bc7f6ee1bf075b710b8a09a1d50a704e17eb88627bd590d2b6216746e316f10c65bef8b2027c724dfb5449465345dcb4c03e634b88323e4468a309d784ef84a7d39300da98d34a47eb5c35c3414b7db5d9d1bb7512c7c106a0b4c40fb61bcdda0ec70bade0d3f0990660cc4d34b6117e4cae286512700e743c9df1067bb595f45781c40b22e51aa103adefa58d654ee573c7f51e38b382aeb1f4a3384fb30c81c7a8ff29b6c5c27c5cb6de7a55281f2df9c7438e3b746677fa820d93b6774297cd8714558cafe3605319d39db6b1872e59eaf9e0fc7b7ea389c859e8295ab4dfa339f234f1f4de50b0cadaaff9961c3919c36fcd01f1c9c05b70c3a2a3a36e47d139ef6bb9df8cd547faa80a09bb78ecbff430637e39a56f2eba87ae29b1010d01124bd4813ecfb240d4050c98523ddd06d059c021ea621b07fd6280d641950e1afb87f10d123f60cd902537b7cc471489d402b226402596618937164dcb2dca2b646f30a63a1d2c4373af12096e99aa9f156d71752f4466eeb682281f795b42e97ef8bebd72836051e7dc648cba79a053326f5e111280563cee3787ff603a15244efdc5f8d2743dde82888036ab5284c15c18315c05829a77f30bd4c569d4ee47db555660df41c4b659a37baff346a38a4d3b3b41978b3c958c7e88afd089754060579dedcf0ba842e80d81af7dd2d4c5fe3834e86b3d3e7be671e8631eb7b54891f7440c605b3d781873d9729cafe1e40612e5d311b08ee7e36d17f6b188fa06</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Enter password</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>Introduction to algorithm, 3th</category>
+        <category>Useless Stuff</category>
       </categories>
       <tags>
-        <tag>Algorithms</tag>
+        <tag>Useless Stuff</tag>
       </tags>
   </entry>
   <entry>
@@ -133,28 +155,6 @@
       </categories>
       <tags>
         <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vmess</title>
-    <url>/2022/12/02/vmess/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oops, try again." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="42158d5cee0c5ceb5f55001ddc2af588ec0d185a838ea01d6b84761a4b9b2bf0">22064b17c03cb0c0e58c99349b6889d04da46185588523f900d7c5ae54c146cc529c7b0164c02e95ea1f2ba6c510c6ce4ab0a612545b4d08989e52bb5a7814bc7f6ee1bf075b710b8a09a1d50a704e17eb88627bd590d2b6216746e316f10c65bef8b2027c724dfb5449465345dcb4c03e634b88323e4468a309d784ef84a7d39300da98d34a47eb5c35c3414b7db5d9d1bb7512c7c106a0b4c40fb61bcdda0ec70bade0d3f0990660cc4d34b6117e4cae286512700e743c9df1067bb595f45781c40b22e51aa103adefa58d654ee573c7f51e38b382aeb1f4a3384fb30c81c7a8ff29b6c5c27c5cb6de7a55281f2df9c7438e3b746677fa820d93b6774297cd8714558cafe3605319d39db6b1872e59eaf9e0fc7b7ea389c859e8295ab4dfa339f234f1f4de50b0cadaaff9961c3919c36fcd01f1c9c05b70c3a2a3a36e47d139ef6bb9df8cd547faa80a09bb78ecbff430637e39a56f2eba87ae29b1010d01124bd4813ecfb240d4050c98523ddd06d059c021ea621b07fd6280d641950e1afb87f10d123f60cd902537b7cc471489d402b226402596618937164dcb2dca2b646f30a63a1d2c4373af12096e99aa9f156d71752f4466eeb682281f795b42e97ef8bebd72836051e7dc648cba79a053326f5e111280563cee3787ff603a15244efdc5f8d2743dde82888036ab5284c15c18315c05829a77f30bd4c569d4ee47db555660df41c4b659a37baff346a38a4d3b3b41978b3c958c7e88afd089754060579dedcf0ba842e80d81af7dd2d4c5fe3834e86b3d3e7be671e8631eb7b54891f7440c605b3d781873d9729cafe1e40612e5d311b08ee7e36d17f6b188fa06</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Enter password</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>Useless Stuff</category>
-      </categories>
-      <tags>
-        <tag>Useless Stuff</tag>
       </tags>
   </entry>
 </search>
