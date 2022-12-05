@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" style="fill-opacity:1;color-rendering:auto;color-interpolation:auto;text-rendering:auto;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;shape-rendering:auto;stroke-opacity:1;fill:#000;stroke-dasharray:none;font-weight:400;stroke-width:1;font-family:&quot;Dialog&quot;;font-style:normal;stroke-linejoin:miter;font-size:12px;stroke-dashoffset:0;image-rendering:auto">
+    <defs>
+        <clipPath id="a" clipPathUnits="userSpaceOnUse">
+            <path d="M0 0h560v420H0V0Z"/>
+        </clipPath>
+    </defs>
+    <g style="fill:#fff;stroke:#fff">
+        <path stroke="none" d="M0 0h560v420H0z" style="clip-path:url(#a);stroke:none"/>
+    </g>
+    <g stroke="none" style="fill:#fff;text-rendering:optimizeSpeed;color-rendering:optimizeSpeed;image-rendering:optimizeSpeed;shape-rendering:crispEdges;stroke:#fff;color-interpolation:sRGB">
+        <path d="M0 0h560v420H0z" style="stroke:none"/>
+        <path d="M73 374h434V31H73Z" style="stroke:none"/>
+    </g>
+    <g style="fill:#262626;text-rendering:geometricPrecision;image-rendering:optimizeQuality;color-rendering:optimizeQuality;stroke-linejoin:round;stroke:#262626;color-interpolation:linearRGB;stroke-width:.6667">
+        <path d="M73 374h434M73 31h434M73 374v-4.34M135 374v-4.34M197 374v-4.34M259 374v-4.34M321 374v-4.34M383 374v-4.34M445 374v-4.34M507 374v-4.34M73 31v4.34M135 31v4.34M197 31v4.34M259 31v4.34M321 31v4.34M383 31v4.34M445 31v4.34M507 31v4.34" style="fill:none"/>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(73 379.333)">0</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(135 379.333)">1</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(197 379.333)">2</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(259 379.333)">3</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(321 379.333)">4</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(383 379.333)">5</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(445 379.333)">6</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-4" y="14" style="stroke:none" transform="translate(507 379.333)">7</text>
+    </g>
+    <g style="fill:#262626;text-rendering:geometricPrecision;image-rendering:optimizeQuality;color-rendering:optimizeQuality;stroke-linejoin:round;stroke:#262626;color-interpolation:linearRGB;stroke-width:.6667">
+        <path d="M73 374V31M507 374V31M73 374h4.34M73 339.7h4.34M73 305.4h4.34M73 271.1h4.34M73 236.8h4.34M73 202.5h4.34M73 168.2h4.34M73 133.9h4.34M73 99.6h4.34M73 65.3h4.34M73 31h4.34M507 374h-4.34M507 339.7h-4.34M507 305.4h-4.34M507 271.1h-4.34M507 236.8h-4.34M507 202.5h-4.34M507 168.2h-4.34M507 133.9h-4.34M507 99.6h-4.34M507 65.3h-4.34M507 31h-4.34" style="fill:none"/>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-12" y="5.5" style="stroke:none" transform="translate(67.667 374)">-1</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-23" y="5.5" style="stroke:none" transform="translate(67.667 339.7)">-0.8</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-23" y="5.5" style="stroke:none" transform="translate(67.667 305.4)">-0.6</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-23" y="5.5" style="stroke:none" transform="translate(67.667 271.1)">-0.4</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-23" y="5.5" style="stroke:none" transform="translate(67.667 236.8)">-0.2</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-8" y="5.5" style="stroke:none" transform="translate(67.667 202.5)">0</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-19" y="5.5" style="stroke:none" transform="translate(67.667 168.2)">0.2</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-19" y="5.5" style="stroke:none" transform="translate(67.667 133.9)">0.4</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-19" y="5.5" style="stroke:none" transform="translate(67.667 99.6)">0.6</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-19" y="5.5" style="stroke:none" transform="translate(67.667 65.3)">0.8</text>
+    </g>
+    <g style="font-size:13.3333px;fill:#262626;text-rendering:geometricPrecision;color-rendering:optimizeQuality;image-rendering:optimizeQuality;stroke:#262626;color-interpolation:linearRGB">
+        <text xml:space="preserve" x="-8" y="5.5" style="stroke:none" transform="translate(67.667 31)">1</text>
+    </g>
+    <g style="stroke-linecap:butt;fill:#0072bd;text-rendering:geometricPrecision;image-rendering:optimizeQuality;color-rendering:optimizeQuality;stroke-linejoin:round;stroke:#0072bd;color-interpolation:linearRGB;stroke-width:.6667">
+        <path d="m73 202.5 1.948-5.387 1.948-5.382 1.947-5.37 1.948-5.356 1.948-5.333 1.948-5.308 1.948-5.276 1.947-5.238 1.948-5.197 1.948-5.15 1.948-5.097 1.948-5.04 1.947-4.977 1.948-4.91 1.948-4.838 1.948-4.762 1.947-4.68 1.948-4.593 1.948-4.503 1.948-4.408 1.947-4.309 1.948-4.204 1.948-4.097 1.948-3.985 1.948-3.869 1.948-3.75 1.947-3.625 1.948-3.499 1.948-3.369 1.948-3.234 1.947-3.098 1.948-2.958 1.948-2.815 1.948-2.67 1.948-2.52 1.947-2.37 1.948-2.218 1.948-2.062 1.948-1.904 1.947-1.745 1.948-1.584 1.948-1.422 1.948-1.258 1.948-1.092 1.947-.927 1.948-.759 1.948-.59 1.948-.424 1.948-.253 1.947-.085 1.948.085 1.948.253 1.948.423 1.947.591 1.948.76 1.948.926 1.948 1.092 1.948 1.258 1.947 1.422 1.948 1.584 1.948 1.745 1.948 1.904 1.948 2.062 1.947 2.217 1.948 2.37 1.948 2.521 1.948 2.67 1.947 2.815 1.948 2.958 1.948 3.098 1.948 3.234 1.948 3.369 1.947 3.499 1.948 3.626 1.948 3.75 1.948 3.868 1.948 3.985 1.947 4.097 1.948 4.204 1.948 4.309 1.948 4.408 1.948 4.503 1.947 4.593 1.948 4.68 1.948 4.762 1.948 4.838 1.948 4.91 1.947 4.978 1.948 5.04 1.948 5.097 1.948 5.149 1.947 5.197 1.948 5.238 1.948 5.276 1.948 5.308 1.948 5.333 1.947 5.355 1.948 5.371 1.948 5.382 1.948 5.387 1.947 5.387 1.948 5.382 1.948 5.37 1.948 5.356 1.948 5.333 1.948 5.308 1.947 5.276 1.948 5.238 1.948 5.197 1.948 5.15 1.947 5.097 1.948 5.04 1.948 4.977 1.948 4.91 1.947 4.838 1.948 4.762 1.948 4.68 1.948 4.593 1.948 4.503 1.948 4.408 1.947 4.309 1.948 4.204 1.948 4.097 1.948 3.985 1.947 3.869 1.948 3.75 1.948 3.625 1.948 3.499 1.948 3.369 1.947 3.234 1.948 3.098 1.948 2.958 1.948 2.815 1.947 2.67 1.948 2.52 1.948 2.37 1.948 2.218 1.948 2.062 1.947 1.904 1.948 1.745 1.948 1.584 1.948 1.422 1.948 1.258 1.947 1.092 1.948.927 1.948.759 1.948.59 1.948.424 1.947.253 1.948.085 1.948-.085 1.948-.253 1.947-.423 1.948-.591 1.948-.76 1.948-.926 1.948-1.092 1.947-1.258 1.948-1.422 1.948-1.584 1.948-1.745 1.948-1.904 1.947-2.062 1.948-2.217 1.948-2.37 1.948-2.521 1.947-2.67 1.948-2.815 1.948-2.958 1.948-3.098 1.948-3.234 1.947-3.369 1.948-3.499 1.948-3.626 1.948-3.75 1.948-3.868 1.947-3.985 1.948-4.097 1.948-4.204 1.948-4.309 1.948-4.408 1.947-4.503 1.948-4.593 1.948-4.68 1.948-4.762 1.947-4.838 1.948-4.91 1.948-4.978 1.948-5.04 1.948-5.097 1.947-5.149 1.948-5.197 1.948-5.238 1.948-5.276 1.948-5.308 1.947-5.333 1.948-5.355 1.948-5.371 1.948-5.382 1.947-5.387" style="fill:none;fill-rule:evenodd"/>
+    </g>
+</svg>
