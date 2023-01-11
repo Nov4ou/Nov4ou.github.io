@@ -64,7 +64,7 @@
   <entry>
     <title>Digital Clock Using 51 MCU</title>
     <url>/2022/12/01/digital-clock-by-51MCU/</url>
-    <content><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
+    <content><![CDATA[<h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
 <blockquote>
 <p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p>
 <ol>

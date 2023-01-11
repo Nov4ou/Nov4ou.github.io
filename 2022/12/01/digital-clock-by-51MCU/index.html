@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nov4ou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Implement Digital Clock by STC89C52PerliminariesThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all">
+    <meta name="description" content="Implement Digital Clock by STC89C52PrefaceThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Digital Clock Using 51 MCU">
 <meta property="og:url" content="https://nov4ou.github.io/2022/12/01/digital-clock-by-51MCU/index.html">
 <meta property="og:site_name" content="Nov4ou&#39;s Blog">
-<meta property="og:description" content="Implement Digital Clock by STC89C52PerliminariesThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all">
+<meta property="og:description" content="Implement Digital Clock by STC89C52PrefaceThe final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-01T03:08:00.000Z">
-<meta property="article:modified_time" content="2022-12-03T03:39:41.955Z">
+<meta property="article:modified_time" content="2023-01-11T05:49:54.185Z">
 <meta property="article:author" content="Nov4ou">
 <meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Implement-Digital-Clock-by-STC89C52"><span class="nav-number">1.</span> <span class="nav-text">Implement Digital Clock by STC89C52</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Perliminaries"><span class="nav-number">1.1.</span> <span class="nav-text">Perliminaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program-Modules"><span class="nav-number">1.2.</span> <span class="nav-text">Program Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Timers"><span class="nav-number">1.2.1.</span> <span class="nav-text">Timers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Timer0"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Timer0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UART-Timer"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">UART Timer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Timer-Conflict"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">Timer Conflict</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nixie-Using-Timer"><span class="nav-number">1.2.2.</span> <span class="nav-text">Nixie Using Timer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EEPROM"><span class="nav-number">1.2.3.</span> <span class="nav-text">EEPROM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes"><span class="nav-number">1.3.</span> <span class="nav-text">Notes:</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Implement-Digital-Clock-by-STC89C52"><span class="nav-number">1.</span> <span class="nav-text">Implement Digital Clock by STC89C52</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preface"><span class="nav-number">1.1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program-Modules"><span class="nav-number">1.2.</span> <span class="nav-text">Program Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Timers"><span class="nav-number">1.2.1.</span> <span class="nav-text">Timers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Timer0"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Timer0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UART-Timer"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">UART Timer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Timer-Conflict"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">Timer Conflict</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nixie-Using-Timer"><span class="nav-number">1.2.2.</span> <span class="nav-text">Nixie Using Timer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EEPROM"><span class="nav-number">1.2.3.</span> <span class="nav-text">EEPROM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes"><span class="nav-number">1.3.</span> <span class="nav-text">Notes:</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -245,7 +245,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-03 11:39:41" itemprop="dateModified" datetime="2022-12-03T11:39:41+08:00">2022-12-03</time>
+      <time title="Modified: 2023-01-11 13:49:54" itemprop="dateModified" datetime="2023-01-11T13:49:54+08:00">2023-01-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Perliminaries"><a href="#Perliminaries" class="headerlink" title="Perliminaries"></a>Perliminaries</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
+        <h1 id="Implement-Digital-Clock-by-STC89C52"><a href="#Implement-Digital-Clock-by-STC89C52" class="headerlink" title="Implement Digital Clock by STC89C52"></a>Implement Digital Clock by STC89C52</h1><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>The final problem combinate all the function learned before, such as nixie tubes, alarm, buzzer and timers, etc. To finish this task, we should link all previous program modules carefully.</p>
 <blockquote>
 <p>There are four modes for this clock. The first mode display current time,<br>the second mode display the alarm time, the third mode is used to set  current time and the fourth mode is to set alarm time.<br><span id="more"></span></p>
 <ol>
