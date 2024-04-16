@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/nov4ou/workspace_v12/Examples/INA238_Hardware/user",
+      "program": "/Users/nov4ou/workspace_v12/Examples/INA238_Hardware/user/build/Debug/outDebug"
+    }
+  ]
+}
