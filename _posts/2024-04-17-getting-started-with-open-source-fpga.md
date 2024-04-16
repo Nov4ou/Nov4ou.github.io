@@ -2,6 +2,8 @@
 layout: post
 title: Getting Started with Open Source FPGA
 date: 2024-04-17 00:50 +0800
+categories: [Electronics Engineering]
+tags: [FPGA]
 ---
 
 I'm currently using the iCESugar open source FPGA board. Using Quartus on Parallels Desktop or other virtual machines can be quite a hassle. However, there are fortunately other, more convenient ways to learn FPGA. This tutorial will walk you through setting up the toolchain and writing your first Verilog code on macOS or Linux.
