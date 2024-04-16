@@ -20,6 +20,6 @@ Once you have installed the [IceStrom Tools](https://clifford.at/icestorm?cmplz-
 To set up a complete FPGA project, you'll need three key files:
 
 1. Verilog Code File `.v`: This file houses the logic and functionality of your design, expressed in the Verilog hardware description language.
-2. Physical Constraints File (.pcf): Bridging the gap between your design and the physical FPGA chip, this file maps your design's inputs and outputs to specific pins on the FPGA package.
-3. Project Manager (Makefile): Acting as the conductor of your project, the Makefile automates the build process, ensuring all the design steps are executed seamlessly and efficiently.
+2. Physical Constraints File `.pcf`: Bridging the gap between your design and the physical FPGA chip, this file maps your design's inputs and outputs to specific pins on the FPGA package.
+3. Project Manager `Makefile`: Acting as the conductor of your project, the Makefile automates the build process, ensuring all the design steps are executed seamlessly and efficiently.
 
