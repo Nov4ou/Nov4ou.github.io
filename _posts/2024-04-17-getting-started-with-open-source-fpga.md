@@ -15,5 +15,11 @@ Once you have installed the [IceStrom Tools](https://clifford.at/icestorm?cmplz-
 > Note: The `iceprog` program that take your generated bitstream file and sent it to the FPGA, may not work on macOS. In that case, you should use `icesporg` instead. You can download from [here](https://github.com/wuxx/icesugar/tree/master/tools). If you run into any trouble with the pre-built binary file, building it from the source code is always an option.
 {: .prompt-info }
 
-dfasdasd
+## Create a project template
+
+To set up a complete FPGA project, you'll need three key files:
+
+1. Verilog Code File `.v`: This file houses the logic and functionality of your design, expressed in the Verilog hardware description language.
+2. Physical Constraints File (.pcf): Bridging the gap between your design and the physical FPGA chip, this file maps your design's inputs and outputs to specific pins on the FPGA package.
+3. Project Manager (Makefile): Acting as the conductor of your project, the Makefile automates the build process, ensuring all the design steps are executed seamlessly and efficiently.
 
