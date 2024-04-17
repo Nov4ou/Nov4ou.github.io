@@ -120,7 +120,7 @@ make upload
 
 Here is the result:
 
-<image src="/media/IMG_4809.gif"/> 
+<image src="/assets/img/IMG_4809.gif"/> 
 
 
 <script src="https://utteranc.es/client.js"
