@@ -120,7 +120,7 @@ make upload
 
 Here is the result:
 
-<image src="/assets/img/IMG_4809.gif"/> 
+<image src="/assets/img/IMG_4809.gif" alt="FPGA"/> 
 
 
 <script src="https://utteranc.es/client.js"
