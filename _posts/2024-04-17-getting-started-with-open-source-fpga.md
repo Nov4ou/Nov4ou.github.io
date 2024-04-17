@@ -109,6 +109,18 @@ clean:
 .PHONY: all clean
 ```
 
+With these three files, you can synthesis your project and upload the `.bin` file to your board:
+> Ensure you use the right programming tool for uploading the binary file. You can change the tools by editing the `MakeFile` file.
+{: .prompt-warning }
+
+```console
+make sint
+make upload
+```
+
+Here is the result:
+
+<image src="/media/IMG_4809.gif"/> 
 
 
 <script src="https://utteranc.es/client.js"
