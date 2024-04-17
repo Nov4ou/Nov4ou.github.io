@@ -123,10 +123,10 @@ Here is the result:
 <image src="/assets/img/IMG_4809.gif" alt="FPGA"/> 
 
 
-<script src="https://utteranc.es/client.js"
+<!-- <script src="https://utteranc.es/client.js"
         repo="Nov4ou/Nov4ou.github.io"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"
         async>
-</script>
+</script> -->

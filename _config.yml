@@ -86,14 +86,18 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: 'utterances' # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
+    repo: "Nov4ou/Nov4ou.github.io"
+    issue_term: "pathname"
+    label: "utterances 🔮"
+    label: "Comments"
+    theme: "preferred-color-scheme"
+    crossorigin: "anonymous"
   # Giscus options › https://giscus.app
   giscus:
     repo: # <gh-username>/<repo>
