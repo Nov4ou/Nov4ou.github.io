@@ -19,9 +19,102 @@ Once you have installed the [IceStrom Tools](https://clifford.at/icestorm?cmplz-
 
 ## Create a project template
 
-To set up a complete FPGA project, you'll need three key files:
+To set up a basic complete FPGA project, you'll need three key files:
 
 1. Verilog Code File `.v`: This file houses the logic and functionality of your design, expressed in the Verilog hardware description language.
 2. Physical Constraints File `.pcf`: Bridging the gap between your design and the physical FPGA chip, this file maps your design's inputs and outputs to specific pins on the FPGA package.
 3. Project Manager `Makefile`: Acting as the conductor of your project, the Makefile automates the build process, ensuring all the design steps are executed seamlessly and efficiently.
 
+### Verliog
+Use the blink program as a example:
+```verilog
+module blink_test (
+	input CLK,
+	output LED_G,
+	output LED_R,
+	output LED_B
+);
+
+//-- Modify this value for changing the blink frequency
+localparam N = 14;  //-- N<=21 Fast, N>=23 Slow
+
+reg [N:0] counter;
+always @(posedge CLK)
+  counter <= counter + 1;
+
+assign LED_G = counter[N];
+assign LED_R = counter[N-1];
+assign LED_B = counter[N-2];
+
+endmodule
+```
+This program makes the RGB blink allowing you to control the frequency. Those input and output are mapped in the `.pcf` file to match the physical input/output pins on the board.
+
+### icesugar.pcf
+
+This file acts as a translator, mapping the input and output signals defined in your Verilog code to their corresponding physical pins on the FPGA chip. You can remove any extraneous content, keeping only the essential pin mappings for the signals actively used in your design – for instance, the CLK (clock) and LED_G (green LED) pins.
+
+``` 
+# Clock signal
+set_io CLK 16
+
+# RGB LED pins
+set_io LED_R 18
+set_io LED_G 12
+set_io LED_B 14
+
+# Additional pin assignments...
+```
+
+### MakeFile 
+
+``` make
+NAME = blink
+
+all: sim sint
+
+sim: $(NAME)_tb.vcd
+
+sint: $(NAME).bin
+
+$(NAME)_tb.vcd: $(NAME).v $(NAME)_tb.v
+	
+	#-- Compilar
+	iverilog -o $(NAME)_tb.out $(NAME).v $(NAME)_tb.v
+
+	#-- Simular
+	./$(NAME)_tb.out
+	
+	#-- Ver visualmente la simulacion con gtkwave
+	gtkwave $(NAME)_tb.vcd $(NAME)_tb.gtkw &
+	
+
+$(NAME).bin: icesugar.pcf $(NAME).v 
+	
+	#-- Sintesis
+	yosys -p "synth_ice40 -blif $(NAME).blif" $(NAME).v
+	
+	#-- Place & route
+	arachne-pnr -d 5k -P sg48 -p icesugar.pcf $(NAME).blif -o $(NAME).txt
+	
+	#-- Generar binario final, listo para descargar en fgpa
+	icepack $(NAME).txt $(NAME).bin
+
+upload:
+	icesprog $(NAME).bin
+
+clean:
+	rm -f *.bin *.txt *.blif *.out *.vcd *~
+
+.PHONY: all clean
+```
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Nov4ou/Nov4ou.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
