@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Getting Started with Open Source FPGA
 date: 2024-04-17 00:50 +0800
 categories: [Electronics Engineering]

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Digital Clock By 51MCU
 date: '2023-01-20 02:40:42 +0800'
 categories: [MCU]
