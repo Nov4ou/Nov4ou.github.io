@@ -25,7 +25,7 @@ To set up a basic complete FPGA project, you'll need three key files:
 3. Project Manager `Makefile`: Acting as the conductor of your project, the Makefile automates the build process, ensuring all the design steps are executed seamlessly and efficiently.
 
 ### Verliog
-Use the blink program as a example:
+Use the blink program as an example:
 ```verilog
 module blink_test (
 	input CLK,
