@@ -125,32 +125,32 @@ void Nixie_Scan(unsigned char Location, Number)
   switch (Location)
   {
     case 1:
-      P2_4=1, P2_3=1, P2_2=1;
+      P2_4 = 1, P2_3 = 1, P2_2 = 1;
       break;
     case 2:
-      P2_4=1, P2_3=1, P2_2=0;
+      P2_4 = 1, P2_3 = 1, P2_2 = 0;
       break;
     case 3:
-      P2_4=1, P2_3=0, P2_2=1;
+      P2_4 = 1, P2_3 = 0, P2_2 = 1;
       break;
     case 4:
-      P2_4=1, P2_3=0, P2_2=0;
+      P2_4 = 1, P2_3 = 0, P2_2 = 0;
       break;
     case 5:
-      P2_4=0, P2_3=1, P2_2=1;
+      P2_4 = 0, P2_3 = 1, P2_2 = 1;
       break;
     case 6:
-      P2_4=0, P2_3=1, P2_2=0;
+      P2_4 = 0, P2_3 = 1, P2_2 = 0;
       break;
     case 7:
-      P2_4=0, P2_3=0, P2_2=1;
+      P2_4 = 0, P2_3 = 0, P2_2 = 1;
       break;
     case 8:
-      P2_4=0, P2_3=0, P2_2=0;
+      P2_4 = 0, P2_3 = 0, P2_2 = 0;
       break;
   }
   if (Location == 2) {
-    if (TimeSetFlashDot == 0 &    ShowOnOff == 0)
+    if (TimeSetFlashDot == 0 & ShowOnOff == 0)
       P0 = NixieTable_Float[Number];
     else
       P0 = NixieTable[Number];
