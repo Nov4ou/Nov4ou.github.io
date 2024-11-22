@@ -10,7 +10,7 @@ git add --all
 git commit -m "Updated blog content"
 
 # Push the local repository to the remote repository
-git push -u origin main
+git push -u origin main --force
 
 # Print a success message
 echo "Blog deployed successfully!"
