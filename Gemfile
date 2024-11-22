@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 6.5", ">= 6.5.5"
+# gem "jekyll-theme-chirpy", "~> 7.0"
 
 group :test do
   gem "html-proofer", "~> 4.4"
@@ -24,7 +25,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
 
-gem 'jekyll-compose', group: [:jekyll_plugins]
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
