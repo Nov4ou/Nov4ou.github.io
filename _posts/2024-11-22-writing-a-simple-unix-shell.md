@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Write a Simple UNIX Shell Using C
+categories:
+- UNIX Programming
+tags:
+- CSAPP
 date: '2024-11-22 16:08:51 +0800'
 ---
 A UNIX shell is essentially an interactive program that runs other programs on behalf of the user. 
