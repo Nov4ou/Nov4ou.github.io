@@ -44,7 +44,7 @@ service telnet
 
 
 
-> Note: If `telnetd` is installed in a different directory, locate its path and set `server = /path/to/telnetd`.
+> Note: If `telnetd` is installed in a different directory, locate its path and set `server = /path/to/telnetd`{: .filepath}.
 {: .prompt-info }
 
 Restart `xinetd` to apply the configuration:
