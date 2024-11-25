@@ -19,19 +19,19 @@
     }
 
     constructor() {
-      // if (this.hasMode) {
-      //   if (this.isDarkMode) {
-      //     if (!this.isSysDarkPrefer) {
-      //       this.setDark();
-      //     }
-      //   } else {
-      //     if (this.isSysDarkPrefer) {
-      //       this.setLight();
-      //     }
-      //   }
-      // }
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
       
-      this.setDark();
+      // this.setDark();
 
       let self = this;
 
