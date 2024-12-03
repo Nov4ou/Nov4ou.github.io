@@ -101,9 +101,9 @@ For this demonstration, I will use a RaspberryPi as the attacker, a Windows mach
 
 | Host                      | IP Address         | MAC Address        |       
 | :------------------------ | :---------------   |
-|Macbook     (server)       | 192.168.1.108      | 8e:74:1b:52:ad:3e  |
+|MacBook     (server)       | 192.168.1.108      | 8e:74:1b:52:ad:3e  |
 |Windows11   (victim)       | 192.168.1.111      | 10:7c:61:61:f6:cd  |
-|raspberryPI (attacker)     | 192.168.1.100      | d8-3a-dd-5a-bf-ae  |
+|raspberryPi (attacker)     | 192.168.1.100      | d8-3a-dd-5a-bf-ae  |
 
 ### Before the Attack
 In the Macbook, run the below scrip to creat a simple web server:
